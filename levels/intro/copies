@@ -1,42 +1,42 @@
-title = Making backups
+title = Crea una copia
 cards =
 
 [description]
 
-This time, you're making a lot of backup copies - you can look at them by clicking on them!
+Questa volta, stai facendo molte copie di backup - puoi guardarli cliccandoci sopra!
 
 [congrats]
 
-Okay, this kind of works.
+Okay, questo è un modo di lavorare.
 
-But you're a bit worried that you'll end up with hundreds of copies of this form, and it will be hard to keep track of all of them.
+Ma sei preoccupato che ti ritroverai con centinaia di copie di questo modulo e sarà difficile tenerne traccia nel tempo.
 
-And especially when working with other people, sending copies back and forth doesn't seem ideal.
+Specialmente quando lavori con altre persone, inviare copie avanti ed indietro non sembra l'ideale.
 
-You can't wait to try these time machines!
+Fermati, devi provare questa macchina del tempo!
 
 [setup]
 
 rm -rf .git
 
-echo "~ Why I want to learn Git ~
+echo "~ Perchè voglio imparare Git ~
 
-(I still need to write this.)" >> form.txt
-
-
-echo "~ Why I want to learn Git ~
-
-- So that I can undo mistakes" >> form2.txt
+(Devo ancora scriverlo.)" >> form.txt
 
 
-echo "~ Why I want to learn Git ~
+echo "~ Perchè volgio imparare Git ~
 
-- So that I can undo mistakes
-- To track my projects over time" >> form2_final.txt
+- Così posso annullare gli errori" >> form2.txt
+
+
+echo "~ Perchè volgio imparare Git ~
+
+- Così posso annullare gli errori
+- Per tracciare i mie progetti attraverso il tempo" >> form2_final.txt
 
 cp form2_final.txt form2_really_final.txt
 
 [win]
 
-# Add another line to form2_really_final.txt!
+# Aggiungi una nuova line al file form2_really_final.txt!
 test "$(cat form2_really_final.txt | wc -l )" -ge 5
